@@ -1,0 +1,42 @@
+\documentclass{article}
+
+\begin{document}
+
+\title{Assignment #2}
+\author{Jensen Holm}
+\date{\today}
+\maketitle
+
+\section{Experiment Results}
+
+Below is a table showing the results of our experiments with decision tree classifiers using different types of data normalization and varying the maximum depth and splitter parameters:
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|c|c|c|c|}
+\hline
+Normalization & Max Depth & Splitter & Accuracy (\%) \\ \hline
+No preprocessing & 5 & Best & 39.167 \\ \hline
+No preprocessing & 5 & Random & 41.667 \\ \hline
+Z-score & 50 & Best & 40.000 \\ \hline
+Z-score & 20 & Best & 39.167 \\ \hline
+MinMax & 20 & Best & 41.667 \\ \hline
+
+\end{tabular}
+\caption{Results of decision tree experiments}
+\end{table}
+
+Note: These values are dummy data and should be replaced with the actual results of your experiments.
+
+\section{Discussion}
+
+Based on the results of the experiments shown in the table, it can be said that the decision tree classifier's performance is affected by the normalization technique, depth, and splitter parameters.
+
+The best accuracy achieved in the experiments was 41.667 percent, obtained with the normalization technique minmax, max depth of 20, and best splitter. However, it's worth noting that the difference in accuracy between the best and worst performing experiments is not that different. They all kind of float around 40 percent accuracy.
+
+The results also suggest that normalization may have a positive impact on the performance of the classifier, as seen with the minmax and z-score normalization techniques. However, the improvement is not consistent across all experiments, and in some cases, it may actually to a decrease in accuracy.
+
+In terms of the splitter parameter, changing it from best to random did not result in a significant difference in accuracy for most experiments. This suggests that the choice of splitter may not have a major impact on the performance of the decision tree classifier, at least for this dataset.
+
+\end{document}
+
